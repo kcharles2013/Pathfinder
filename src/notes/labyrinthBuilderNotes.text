@@ -1,0 +1,18 @@
+remove all classes from nodes;
+
+add new class "unvisited-node" to every node;
+    - the only change this will have on the node is that it will be 'white';
+
+find all a node's neighbors:
+- top neighbor:
+    - y is greater than 0:
+        - the top is Node: x, y - 1
+- bottom neighbor:
+    - if y is less than gridArray.length - 1:
+        - the bottom is Node: x, y + 1;
+- right neighbor:
+    - if x is less than gridArray[i].length - 1:
+        - the right is Node: x + 1, y;
+- left neighbor:
+    - if x is greater than 0:
+        - the left is Node: x - 1, y;

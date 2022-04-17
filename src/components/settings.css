@@ -1,0 +1,158 @@
+.settings-container{
+    align-items: center;
+    /*justify-content: center;*/
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: calc(100vw/4);
+    background-color: var(--GridContainerColor);
+    box-shadow: 0 1px 20px 1px #000;
+    z-index: 2;
+    /*overflow: hidden;*/
+}
+
+.settings-container-open{
+    display: flex;
+    flex-direction: column;
+    animation: 0.75s ease-in-out settingsContainerOpenAnim;
+}
+
+@keyframes settingsContainerOpenAnim {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.settings-closed{
+    display: none;
+}
+
+.settings-open{
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: grey;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.settings-cover-open{
+    display: flex;
+    animation: 0.75s ease-in-out settingsCoverOpenAnim
+}
+
+@keyframes settingsCoverOpenAnim {
+    0%{
+        /*transform: translateX(100%);*/
+        opacity: 0;
+    }
+    100%{
+        /*transform: translateX(0);*/
+        opacity: 0.5;
+    }
+}
+
+.settings-exit-button{
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.settings-exit-button:hover{
+    cursor: pointer;
+    background-color: grey;
+    transition: 0.2s ease-in-out;
+}
+
+.settings-title{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 4em;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+}
+
+.settings-options-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.settings-option-container{
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    margin-top: 4em;
+    /*background-color: darkgreen;*/
+}
+
+.settings-option-indicator{
+    height: 2em;
+    width: 2em;
+    margin-right: 1em;
+    border-radius: 50%;
+    border: 0.2em solid white;
+}
+
+.settings-option-indicator:hover{
+    cursor: pointer;
+}
+
+.settings-option-indicator-false{
+    background-color: red;
+}
+
+.settings-option-indicator-false:hover{
+    opacity: 50%;
+}
+
+.settings-option-indicator-true{
+    background-color: green;
+}
+
+.settings-option-indicator-true:hover{
+    opacity: 50%;
+}
+
+.settings-option-text{
+    font-size: 2em;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.path-speed-slider{
+    font-size: 2em;
+}
+
+.slider-disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}

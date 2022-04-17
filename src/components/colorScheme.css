@@ -1,0 +1,15 @@
+* {
+    --ButtonColor: #A0D2DB;
+    --HoverButtonColor: #C4E3E9;
+    --HeaderFooterColor: #000000;
+    --GridContainerColor: #473C8A;
+    --LegendColor: #726E60;
+    --NodeHoverColor: #3A3271;
+}
+
+/*Color Palette in order: */
+/*Black, Dark Slate Blue, Powder Blue, followed by Nickel*/
+/*HoverButtonColor is two shades (powder blue) lighter than ButtonColor*/
+/*NodeHoverColor is two shades (Dark Slate Blue) darker than GridContainerColor, to simulate being closer to user*/
+/*color-scheme reference*/
+/*https://coolors.co/000000-473c8a-a0d2db-726e60-c4e3e9*/

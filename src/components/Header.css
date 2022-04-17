@@ -1,0 +1,152 @@
+@media screen and (max-width: 390px) and (max-height: 844px) {
+    .header-container{
+        font-size: 2em;
+    }
+    #title-text{
+        font-size: 3.5em;
+    }
+    #block-container-one{
+        width: 20vw;
+        /*background-color: green;*/
+    }
+    #block-container-two{
+        width: 60vw;
+        /*background-color: red;*/
+    }
+    #block-container-three{
+        width: 20vw;
+        /*background-color: yellow;*/
+    }
+    #settings{
+        display: none;
+    }
+    #settings:hover{
+        cursor: pointer;
+    }
+    #settings-icon{
+        font-size: 3em;
+        display: flex;
+    }
+    #settings-icon:hover{
+        cursor: pointer;
+    }
+    #a-star{
+        font-size: 3em;
+        white-space: nowrap;
+        margin-right: 1.5em;
+        margin-left: 0;
+    }
+    #clear-path{
+        font-size: 3em;
+        white-space: nowrap;
+        margin-right: -2.5em;
+        margin-left: 0;
+    }
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--HeaderFooterColor);
+    color: white;
+    margin: 0;
+    height: 10vh;
+    width: 100vw;
+
+}
+
+.block-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: calc(100vw/3);
+    box-shadow: 0 1px 20px 1px #000;
+}
+
+.title{
+    position: absolute;
+    left: 1em;
+    font-size: 2.5em;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+}
+
+.settings{
+    display: flex;
+    position: absolute;
+    /*top: 1em;*/
+    right: 1em;
+
+    background-color: var(--ButtonColor);
+    color: black;
+    /*margin: 1em;*/
+    padding: 0.25em 0.7em;
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+
+    font-size: 2em;
+
+}
+
+.settings:hover{
+    background-color: var(--HoverButtonColor);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.settings-icon{
+    display: none;
+    position: absolute;
+    right: 1em;
+
+    background-color: var(--ButtonColor);
+    color: black;
+    /*margin: 1em;*/
+    padding: 0.25em 0.7em;
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+
+    font-size: 2em;
+
+}
+
+.settings-icon:hover{
+    background-color: var(--HoverButtonColor);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.header-button{
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.a-star-disabled{
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: none;
+}
+
+/*.button{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    background-color: green;*/
+/*    color: black;*/
+/*    !*margin: .5em;*!*/
+/*    padding: 0.5em 0.7em;*/
+/*    border-radius: 50px;*/
+/*    transition: 0.2s ease-in-out;*/
+/*    font-size: 1.5em;*/
+/*}*/
+
+/*.button:hover{*/
+/*    background-color: lightgreen;*/
+/*    transition: 0.2s ease-in-out;*/
+/*    cursor: pointer;*/
+/*}*/

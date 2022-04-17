@@ -1,0 +1,59 @@
+.node{
+    background-color: silver;
+    border: 1px solid black;
+    height: 2em;
+    width: 2em;
+}
+
+.node:hover{
+    background-color: var(--NodeHoverColor);
+    /*opacity: 0.5;*/
+    /*transition: 0.1s ease-out;*/
+}
+
+.unvisited-node{
+    background-color: white;
+    border: 1px solid black;
+    height: 2em;
+    width: 2em;
+}
+
+.unvisited-node:hover{
+    background-color: pink;
+}
+
+
+
+.start-node{
+    background-color: green;
+}
+
+.end-node{
+    background-color: red;
+}
+
+.wall-node{
+    background-color: black;
+}
+
+.considering-node{
+    background-color: darkblue;
+}
+
+.path-node{
+    background-color: gold;
+    animation-name: quickest-path;
+    animation-duration: 0.5s;;
+}
+
+@keyframes quickest-path {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

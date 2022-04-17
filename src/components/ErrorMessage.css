@@ -1,0 +1,26 @@
+.error-message-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin-bottom: -20vh;*/
+    position: absolute;
+    bottom: 18vh;
+    /*background-color: green;*/
+    /*margin-bottom: -8vh;*/
+    /*margin-top: -2vh;*/
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*position: absolute;*/
+    /*bottom: 17.5vh;*/
+    font-size: 2em;
+    color: red;
+    /*margin-bottom: -5vh;*/
+}
+
+.no-error{
+    display: none;
+}
