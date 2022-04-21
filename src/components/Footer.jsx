@@ -54,6 +54,7 @@ function Footer(){
                     buttonText="Build Labyrinth"
                 />
             </div>
+            <script src="browserHandler.js" />
         </div>
     )
 }
