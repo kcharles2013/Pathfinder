@@ -5,6 +5,7 @@ import GridRow from "./gridRow";
 import ErrorMessage from "./ErrorMessage";
 import LegendMobile from "./legend-mobile";
 import userVars from "./userVars";
+import Legend from "./legend";
 
 function Grid(){
     let tempGrid = createGrid();
@@ -22,22 +23,29 @@ function Grid(){
 
     return(
         <div className="grid-container" id='grid-container'>
-            <div className="grid" id='grid'>
-                {grid.map((item, index) => {
-                    let thisID = `grid-row-${index}`
-                    return(
-                        <GridRow
-                            className="grid-row"
-                            id={thisID}
-                            columnNum={index}
-                            selectStartNode={selectStartNode}
-                            selectEndNode={selectEndNode}
-                            key={`Row: ${index}`}
-                        />
-                    )
-                })}
+            <div className='grid-item left-legend' id='left-legend'>
+                <Legend />
             </div>
-            <LegendMobile />
+            <div className='grid-item center-grid' id='center-grid'>
+                <div className="grid" id='grid'>
+                    {grid.map((item, index) => {
+                        let thisID = `grid-row-${index}`
+                        return(
+                            <GridRow
+                                className="grid-row"
+                                id={thisID}
+                                columnNum={index}
+                                selectStartNode={selectStartNode}
+                                selectEndNode={selectEndNode}
+                                key={`Row: ${index}`}
+                            />
+                        )
+                    })}
+                </div>
+            </div>
+            <div className='grid-item right-legend' id='right-legend'>
+                <LegendMobile />
+            </div>
             <ErrorMessage
                 errorMessage={testText}
             />

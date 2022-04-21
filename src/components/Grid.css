@@ -1,11 +1,38 @@
-@media screen and (max-width: 390px) and (max-height: 844px) {
+@media screen and (max-width: 767px) {
     #grid-container{
-        font-size: 3em;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     #grid{
-        margin-bottom: 4vh;
+        /*margin-bottom: 4vh;*/
+    }
+
+    #right-legend{
+        /*align-items: stretch;*/
+        /*display: none;*/
+        height: 35vh;
+        width: 100%;
+        /*background-color: red;*/
+        /*flex-grow: 0.5;*/
+    }
+
+    #left-legend{
+        /*align-items: stretch;*/
+        height: 5vh;
+        width: 100vw;
+        /*background-color: green;*/
+        /*flex-grow: 0;*/
+    }
+
+    #center-grid{
+        /*align-items: stretch;*/
+        height: 60vh;
+        width: 100%;
+        /*background-color: orange;*/
+        /*flex-grow: 2;*/
     }
 
 
@@ -16,9 +43,35 @@
     height: 76vh;
     width: 100vw;
     display: flex;
+    flex-direction: row;
     /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.right-legend{
+    height: 100%;
+    width: 25%;
+    /*background-color: red;*/
+}
+
+.left-legend{
+    height: 100%;
+    width: 25%;
+    /*background-color: green;*/
+}
+
+.center-grid{
+    height: 100%;
+    width: 50%;
+    /*background-color: orange;*/
 }
 
 .grid{
@@ -30,7 +83,7 @@
     /*height: 50vh;*/
     /*width: 50vw;*/
     box-shadow: 0 1px 20px 1px #000;
-    margin-bottom: 3vh;
+    /*margin-bottom: 3vh;*/
 }
 
 .grid-row{
