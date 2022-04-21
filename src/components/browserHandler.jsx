@@ -9,7 +9,7 @@ function BrowserHandler(){
         // alert(ba);
 
         if (ba.indexOf(possibleBrowser[2]) > -1){
-            // document.getElementById('footer-container').classList.add('safari-mobile-browser');
+            document.getElementById('footer-container').classList.add('safari-mobile-browser');
             alert('You are using a safari-browser');
         }
 
