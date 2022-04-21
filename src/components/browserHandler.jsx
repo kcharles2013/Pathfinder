@@ -6,7 +6,7 @@ function BrowserHandler(){
 
     window.addEventListener('load', function (){
         const ub = navigator.userAgent;
-        alert(ub);
+        // alert(ub);
         document.getElementById('footer-container').classList.add('safari-mobile-browser');
     })
 
