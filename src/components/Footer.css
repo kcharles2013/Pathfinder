@@ -16,12 +16,15 @@
         align-items: center;
         justify-content: center;
     }
-
 }
 
 .button-divider{
     display: flex;
     flex-direction: row;
+}
+
+.safari-mobile-browser{
+    padding-bottom: 65px;
 }
 
 .footer-container {

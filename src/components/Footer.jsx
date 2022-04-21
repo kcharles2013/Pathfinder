@@ -8,6 +8,10 @@ import Button from "./button";
 // let recursion = 0;
 
 function Footer(){
+
+    if (navigator.userAgent.indexOf("Safari") !== -1){
+        document.getElementById('footer-container').classList.add('safari-mobile-browser');
+    }
     return(
         <div className="footer-container" id='footer-container'>
             <div className='button-divider' id='button-divider'>
