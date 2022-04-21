@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Grid from "./components/Grid";
 import Footer from "./components/Footer";
 import Settings from "./components/settings";
+import BrowserHandler from "./components/browserHandler";
 import Legend from "./components/legend";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Grid />
         <Footer />
         {/*<Settings />*/}
+        <BrowserHandler />
     </div>
   );
 }
