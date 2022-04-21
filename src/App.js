@@ -17,7 +17,7 @@ function App() {
         <Grid />
         <Footer />
         {/*<Settings />*/}
-        <BrowserHandler />
+        {/*<BrowserHandler />*/}
     </div>
   );
 }
