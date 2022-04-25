@@ -1,7 +1,17 @@
+@media screen and (max-width: 767px){
+    #settings-container{
+        width: 100vw;
+    }
+
+    #settings-cover{
+        display: none;
+    }
+}
+
 .settings-container{
     align-items: center;
     /*justify-content: center;*/
-    flex-direction: column;
+    /*flex-direction: column;*/
     position: absolute;
     top: 0;
     right: 0;
@@ -16,7 +26,18 @@
 .settings-container-open{
     display: flex;
     flex-direction: column;
+}
+
+.settings-container-anim{
     animation: 0.75s ease-in-out settingsContainerOpenAnim;
+}
+
+.settings-container-mobile-anim{
+    animation: 0.75s ease-in-out settingsContainerOpenAnimMobile;
+}
+
+.settings-container-closed{
+    display: none;
 }
 
 @keyframes settingsContainerOpenAnim {
@@ -30,14 +51,25 @@
     }
 }
 
-.settings-closed{
-    display: none;
+@keyframes settingsContainerOpenAnimMobile{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.settings-open{
-    display: flex;
-    flex-direction: column;
-}
+/*.settings-closed{*/
+/*    display: none;*/
+/*}*/
+
+/*.settings-open{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
 
 .settings-cover{
     position: absolute;
@@ -53,6 +85,10 @@
 .settings-cover-open{
     display: flex;
     animation: 0.75s ease-in-out settingsCoverOpenAnim
+}
+
+.settings-cover-closed{
+    display: none;
 }
 
 @keyframes settingsCoverOpenAnim {
@@ -91,6 +127,7 @@
 }
 
 .settings-title{
+    text-align: center;
     margin-top: 2em;
     margin-bottom: 1em;
     font-size: 4em;

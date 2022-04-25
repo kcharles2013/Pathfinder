@@ -15,7 +15,17 @@ function Settings(){
 
     return(
         <>
-            <div className="settings-container settings-closed settings-container-closed" id='settings'>
+            <div
+                className="settings-cover settings-closed settings-cover-closed"
+                id='settings-cover'
+                onClick={function (){
+                    settingsExitHandler();
+                }}
+            />
+            <div
+                className="settings-container settings-container-anim settings-closed settings-container-closed"
+                id='settings-container'
+            >
                 <div
                     className="settings-exit-button"
                     onClick={function (){
@@ -24,44 +34,39 @@ function Settings(){
                 >
                     X
                 </div>
-                <div className='settings-title'>
-                    Settings
-                </div>
-                <div className="settings-options-container">
-                    <SettingsOption
-                        text='Lateral Movement'
-                        handleOnClick={settingsOptionLateralMovementHandler}
-                        ID='lateral-movement'
-                    />
-                    <SettingsOption
-                        text={pathSpeedTitle}
-                        handleOnClick={function (){
-                            setPathSpeed(userVars.pathSpeed);
-                            document.getElementById('speed-slider').value = userVars.pathSpeed;
-                            settingsOptionPathSpeedHandler();
-                        }}
-                        ID='path-speed'
-                    />
-                    <div>
-                        <input
-                            className="path-speed-slider slider-disabled"
-                            type="range"
-                            min="1"
-                            max="100"
-                            defaultValue={userVars.pathSpeed}
-                            id="speed-slider"
-                            onChange={updateSpeed}
+                <div className='settings-wrapper'>
+                    <div className='settings-title' id='settings-title'>
+                        Settings
+                    </div>
+                    <div className="settings-options-container" id='settings-options-container'>
+                        <SettingsOption
+                            text='Lateral Movement'
+                            handleOnClick={settingsOptionLateralMovementHandler}
+                            ID='lateral-movement'
                         />
+                        <SettingsOption
+                            text={pathSpeedTitle}
+                            handleOnClick={function (){
+                                setPathSpeed(userVars.pathSpeed);
+                                document.getElementById('speed-slider').value = userVars.pathSpeed;
+                                settingsOptionPathSpeedHandler();
+                            }}
+                            ID='path-speed'
+                        />
+                        <div>
+                            <input
+                                className="path-speed-slider slider-disabled"
+                                type="range"
+                                min="1"
+                                max="100"
+                                defaultValue={userVars.pathSpeed}
+                                id="speed-slider"
+                                onChange={updateSpeed}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-            <div
-                className="settings-cover settings-closed settings-cover-closed"
-                id='settings-cover'
-                onClick={function (){
-                    settingsExitHandler();
-                }}
-            />
         </>
     )
 }
@@ -115,11 +120,29 @@ function settingsOptionPathSpeedHandler(){
     }
 }
 
+function changeSettingsAnim(mediaQueryParameter){
+    if (mediaQueryParameter.matches){
+        console.log(`Matches`);
+        console.log(`inputVar: ${mediaQueryParameter}`);
+        return true;
+    } else {
+        console.log(`Does not match`);
+        console.log(`inputVar: ${mediaQueryParameter}`);
+        return false;
+    }
+}
+
 function settingsExitHandler(){
+
+    // document.getElementById('settings-container').classList.replace('settings-container-mobile-open', 'settings-container-closed');
+    // document.getElementById('settings-container').classList.replace('settings-open', 'settings-closed');
+
+    document.getElementById('settings-container').classList.replace('settings-container-open', 'settings-container-closed');
+    // document.getElementById('settings-container').classList.replace('settings-open', 'settings-closed');
+
     document.getElementById('settings-cover').classList.replace('settings-cover-open', 'settings-cover-closed');
-    document.getElementById('settings').classList.replace('settings-container-open', 'settings-container-closed');
-    document.getElementById('settings-cover').classList.replace('settings-open', 'settings-closed');
-    document.getElementById('settings').classList.replace('settings-open', 'settings-closed');
+    // document.getElementById('settings-cover').classList.replace('settings-open', 'settings-closed');
+
 }
 
 export default Settings;

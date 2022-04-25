@@ -13,41 +13,66 @@ for (let i = 101; i > 1; i--){
     let value = i - 1;
     speedArray.push(value);
 }
-console.log(speedArray);
+
+// SETS THE INITIAL ANIMATION CLASS FOR SETTINGS PAGE;
+window.addEventListener('load', function (){
+    console.log(`Page has loaded, window.innerWidth: ${window.innerWidth}`);
+    if (window.innerWidth <= 767) {
+        document.getElementById('settings-container').classList.replace('settings-container-anim', 'settings-container-mobile-anim');
+    }
+});
+
+// UPDATES THE SETTINGS ANIMATION BASED ON RESIZING OF THE SCREEN'S WIDTH;
+window.addEventListener('resize', function(){
+    console.log(`Window width: ${window.innerWidth}`);
+    let isMobile = true;
+    for (let i = 0; i < document.getElementById('settings-container').classList.length; i++){
+        if (document.getElementById('settings-container').classList[i] === 'settings-container-anim'){
+            isMobile = false;
+        }
+    }
+    if (window.innerWidth <= 767 && isMobile === false){
+        document.getElementById('settings-container').classList.replace('settings-container-anim', 'settings-container-mobile-anim');
+    } else if (window.innerWidth > 767){
+        document.getElementById('settings-container').classList.replace('settings-container-mobile-anim', 'settings-container-anim');
+    }
+});
 
 function Header(){
     return (
-        <div className="header-container">
-            <div className="block-container" id="block-container-one">
-                <h1 className="title" id='title-text'>Pathfinder</h1>
-            </div>
-            <div className="block-container" id="block-container-two">
-                <div
-                    className="button header-button"
-                    id="a-star"
-                    onClick={A_Star}
-                >A-Star Algo</div>
-                <div
-                    className="button header-button"
-                    id='clear-path'
-                    onClick={clearPathHandler}
-                >Clear Pathway</div>
-            </div>
-            <div className="block-container" id="block-container-three">
-                <div
-                    className="settings"
-                    id="settings"
-                    onClick={function (){
-                        settingsHandler();
-                    }}
-                >Settings</div>
-                <FiMenu
-                    className="settings-icon"
-                    id="settings-icon"
-                    onClick={function (){
-                        settingsHandler();
-                    }}
-                />
+        <div className="header-container" id="header-container">
+                <div className="header-wrapper" >
+                <div className="block-container" id="block-container-one">
+                    <h1 className="title" id='title-text'>Pathfinder</h1>
+                </div>
+                <div className="block-container" id="block-container-two">
+                    <div
+                        className="button header-button"
+                        id="a-star"
+                        onClick={A_Star}
+                    >A-Star Algo</div>
+                    <div
+                        className="button header-button"
+                        id='clear-path'
+                        onClick={clearPathHandler}
+                    >Clear Pathway</div>
+                </div>
+                <div className="block-container" id="block-container-three">
+                    <div
+                        className="settings"
+                        id="settings"
+                        onClick={function (){
+                            settingsHandler();
+                        }}
+                    >Settings</div>
+                    <FiMenu
+                        className="settings-icon"
+                        id="settings-icon"
+                        onClick={function (){
+                            settingsHandler();
+                        }}
+                    />
+                </div>
             </div>
         </div>
     )
@@ -366,13 +391,31 @@ function A_Star(){
     delayPathAnim(1, pathStack);
 }
 
+// function changeSettingsAnim(mediaQueryParameter){
+//     if (mediaQueryParameter.matches){
+//         console.log(`Matches`);
+//         console.log(`inputVar: ${mediaQueryParameter}`);
+//         return true;
+//     } else {
+//         console.log(`Does not match`);
+//         console.log(`inputVar: ${mediaQueryParameter}`);
+//         return false;
+//     }
+// }
+
 function settingsHandler(){
-    console.log("Settings opened");
-    document.getElementById('settings-cover').classList.replace('settings-closed', 'settings-open');
-    document.getElementById('settings').classList.replace('settings-closed', 'settings-open');
-    document.getElementById('settings-cover').classList.replace('settings-cover-closed', 'settings-cover-open');
-    document.getElementById('settings').classList.replace('settings-container-closed', 'settings-container-open');
-}
+    // let param = window.matchMedia('(max-width: 767px)');
+    // let isMobile = changeSettingsAnim(param);
+    // console.log(`isMobile: ${isMobile}`);
+
+    // document.getElementById('settings-container').classList.replace('settings-container-closed', 'settings-container-mobile-open');
+    // document.getElementById('settings-container').classList.replace('settings-closed', 'settings-open');
+
+    document.getElementById('settings-container').classList.replace('settings-container-closed', 'settings-container-open');
+    // document.getElementById('settings-container').classList.replace('settings-closed', 'settings-open');
+
+    // document.getElementById('settings-cover').classList.replace('settings-closed', 'settings-open');
+    document.getElementById('settings-cover').classList.replace('settings-cover-closed', 'settings-cover-open');}
 
 function delayPathAnim(index, pathArray){
     // DEACTIVATES A-STAR ALGORITHM TO PREVENT USER FROM SPAMMING IT;

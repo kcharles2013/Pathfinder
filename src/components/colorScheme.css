@@ -1,6 +1,6 @@
 * {
     --ButtonColor: #A0D2DB;
-    --HoverButtonColor: #E1F1F4;
+    --HoverButtonColor: #C4E3E9;
     --HeaderFooterColor: #000000;
     --GridContainerColor: #473C8A;
     --LegendColor: #726E60;
@@ -8,12 +8,12 @@
 }
 
 .light-color-scheme{
-    --LightButtonColor: #00000;
-    --LightHoverButtonColor: #C4E3E9;
-    --LightHeaderFooterColor: #000000;
-    --LightGridContainerColor: #473C8A;
-    --LightLegendColor: #726E60;
-    --LightNodeHoverColor: #3A3271;
+    --LightButtonColor: #ffffff;
+    --LightHoverButtonColor: #B5F44A;
+    --LightHeaderFooterColor: #007EA7;
+    --LightGridContainerColor: #C0C0C0;
+    --LightLegendColor: #433E3F;
+    --LightNodeHoverColor: #B5F44A;
 
 }
 
