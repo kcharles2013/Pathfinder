@@ -113,7 +113,7 @@ function A_Star(){
 
 
     } catch(error) {
-        alert("Please select a start node");
+        alert("Please select a Start Block");
         return 0;
     }
 
@@ -123,7 +123,7 @@ function A_Star(){
         if (document.getElementsByClassName('start-node')[0].id === undefined) throw "Please select an end node";
 
     } catch(error) {
-        alert("Please select an end node");
+        alert("Please select an End Block");
         return 0;
     }
 
