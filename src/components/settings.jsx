@@ -16,14 +16,14 @@ function Settings(){
     return(
         <>
             <div
-                className="settings-cover settings-closed settings-cover-closed"
+                className="settings-cover settings-cover-closed"
                 id='settings-cover'
                 onClick={function (){
                     settingsExitHandler();
                 }}
             />
             <div
-                className="settings-container settings-container-anim settings-closed settings-container-closed"
+                className="settings-container settings-container-anim settings-container-closed"
                 id='settings-container'
             >
                 <div

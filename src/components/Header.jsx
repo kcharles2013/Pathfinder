@@ -14,9 +14,9 @@ for (let i = 101; i > 1; i--){
     speedArray.push(value);
 }
 
-// SETS THE INITIAL ANIMATION CLASS FOR SETTINGS PAGE;
+// SETS THE INITIAL ANIMATION CLASS FOR SETTINGS PAGE: ON LOAD;
 window.addEventListener('load', function (){
-    console.log(`Page has loaded, window.innerWidth: ${window.innerWidth}`);
+    // console.log("Page has loaded: ", `width, height: ${window.innerWidth}, ${window.innerHeight}`);
     if (window.innerWidth <= 767) {
         document.getElementById('settings-container').classList.replace('settings-container-anim', 'settings-container-mobile-anim');
     }
@@ -24,7 +24,7 @@ window.addEventListener('load', function (){
 
 // UPDATES THE SETTINGS ANIMATION BASED ON RESIZING OF THE SCREEN'S WIDTH;
 window.addEventListener('resize', function(){
-    console.log(`Window width: ${window.innerWidth}`);
+    // console.log(`Window width: ${window.innerWidth}`);
     let isMobile = true;
     for (let i = 0; i < document.getElementById('settings-container').classList.length; i++){
         if (document.getElementById('settings-container').classList[i] === 'settings-container-anim'){
