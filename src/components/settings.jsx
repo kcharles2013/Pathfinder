@@ -3,6 +3,8 @@ import SettingsOption from "./settingsOption";
 import "./settings.css";
 import userVars from "./userVars";
 
+
+
 function Settings(){
 
     const [pathSpeed, setPathSpeed] = useState(userVars.pathSpeed);
@@ -65,10 +67,23 @@ function Settings(){
                             />
                         </div>
                     </div>
+                    <div className='settings-theme-title' id='settings-theme-title'>
+                        Themes
+                    </div>
+                    <SettingsOption
+                        text="Light - Celadon Blue"
+                        handleOnClick={settingsThemeLight}
+                        ID="light-color-scheme"
+                    />
+                    <SettingsOption
+                        text="Dark - Dark Slate Blue"
+                        handleOnClick={settingsThemeDark}
+                        ID="dark-color-scheme"
+                    />
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 function init(){
@@ -79,6 +94,64 @@ function init(){
     settingsClosedAnim.addEventListener('animationend', (ev) => {
         settingsClosedAnim.style.display = 'none';
     }, false);
+}
+
+function settingsThemeLight(){
+    // console.log("Change to light");
+    let classes = document.getElementById("App").classList;
+    let currentScheme;
+    for (let i = 0; i < classes.length; i++){
+        // console.log(`Class: ${classes[i]}`);
+        switch (classes[i]) {
+            case ('dark-color-scheme'):
+                currentScheme = classes[i];
+                // console.log("true");
+                break;
+            case ('medium-color-scheme'):
+                currentScheme = classes[i];
+                break;
+            default:
+                break;
+        }
+    }
+
+    console.log(`currentScheme: ${currentScheme}`);
+
+
+    if (currentScheme !== null){
+        console.log(currentScheme);
+        document.getElementById("App").classList.replace(currentScheme, "light-color-scheme");
+        document.getElementById("light-color-scheme").classList.replace('settings-option-indicator-false', 'settings-option-indicator-true');
+        document.getElementById(currentScheme).classList.replace('settings-option-indicator-true', 'settings-option-indicator-false');
+    }
+}
+
+function settingsThemeDark(){
+    // console.log("Change to dark");
+    let classes = document.getElementById("App").classList;
+    let currentScheme;
+    for (let i = 0; i < classes.length; i++){
+        // console.log(`Class: ${classes[i]}`);
+        switch (classes[i]) {
+            case ('light-color-scheme'):
+                currentScheme = 'light-color-scheme';
+                // console.log("true");
+                break;
+            case ('medium-color-scheme'):
+                currentScheme = classes[i];
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    if (currentScheme !== null){
+        console.log(currentScheme);
+        document.getElementById("App").classList.replace(currentScheme, "dark-color-scheme");
+        document.getElementById("dark-color-scheme").classList.replace('settings-option-indicator-false', 'settings-option-indicator-true');
+        document.getElementById(currentScheme).classList.replace('settings-option-indicator-true', 'settings-option-indicator-false');
+    }
 }
 
 

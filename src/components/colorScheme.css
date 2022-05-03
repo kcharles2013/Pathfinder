@@ -1,4 +1,23 @@
 * {
+    /*--ButtonColor: #A0D2DB;*/
+    /*--HoverButtonColor: #C4E3E9;*/
+    /*--HeaderFooterColor: #000000;*/
+    /*--GridContainerColor: #473C8A;*/
+    /*--LegendColor: #726E60;*/
+    /*--NodeHoverColor: #3A3271;*/
+}
+
+.light-color-scheme{
+    --ButtonColor: #ffffff;
+    --HoverButtonColor: #B5F44A;
+    --HeaderFooterColor: #007EA7;
+    --GridContainerColor: #C0C0C0;
+    --LegendColor: #433E3F;
+    --NodeHoverColor: #B5F44A;
+
+}
+
+.medium-color-scheme{
     --ButtonColor: #A0D2DB;
     --HoverButtonColor: #C4E3E9;
     --HeaderFooterColor: #000000;
@@ -7,32 +26,13 @@
     --NodeHoverColor: #3A3271;
 }
 
-.light-color-scheme{
-    --LightButtonColor: #ffffff;
-    --LightHoverButtonColor: #B5F44A;
-    --LightHeaderFooterColor: #007EA7;
-    --LightGridContainerColor: #C0C0C0;
-    --LightLegendColor: #433E3F;
-    --LightNodeHoverColor: #B5F44A;
-
-}
-
-.medium-color-scheme{
-    --MediumButtonColor: #A0D2DB;
-    --MediumHoverButtonColor: #C4E3E9;
-    --MediumHeaderFooterColor: #000000;
-    --MediumGridContainerColor: #473C8A;
-    --MediumLegendColor: #726E60;
-    --MediumNodeHoverColor: #3A3271;
-}
-
 .dark-color-scheme{
-    --DarkButtonColor: #A0D2DB;
-    --DarkHoverButtonColor: #C4E3E9;
-    --DarkHeaderFooterColor: #000000;
-    --DarkGridContainerColor: #473C8A;
-    --DarkLegendColor: #726E60;
-    --DarkNodeHoverColor: #3A3271;
+    --ButtonColor: #A0D2DB;
+    --HoverButtonColor: #C4E3E9;
+    --HeaderFooterColor: #000000;
+    --GridContainerColor: #473C8A;
+    --LegendColor: #726E60;
+    --NodeHoverColor: #3A3271;
 }
 
 /*Color Palette in order: */

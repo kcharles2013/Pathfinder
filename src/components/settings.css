@@ -142,6 +142,16 @@
     font-weight: bold;
 }
 
+.settings-theme-title{
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 3em;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+}
+
 .settings-options-container{
     display: flex;
     flex-direction: column;
