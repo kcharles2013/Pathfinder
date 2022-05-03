@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px){
+@media screen and (max-width: 810px){
     #settings-container{
         width: 100vw;
     }
@@ -8,6 +8,12 @@
     }
 }
 
+/*@media screen and (max-width: 1020px){*/
+/*    #settings-container{*/
+/*        width: 35vw;*/
+/*    }*/
+/*}*/
+
 .settings-container{
     align-items: center;
     /*justify-content: center;*/
@@ -16,7 +22,7 @@
     top: 0;
     right: 0;
     height: 100vh;
-    width: calc(100vw/4);
+    width: 35vw;
     background-color: var(--GridContainerColor);
     box-shadow: 0 1px 20px 1px #000;
     z-index: 2;

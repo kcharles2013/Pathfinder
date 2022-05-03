@@ -17,7 +17,7 @@ for (let i = 101; i > 1; i--){
 // SETS THE INITIAL ANIMATION CLASS FOR SETTINGS PAGE: ON LOAD;
 window.addEventListener('load', function (){
     // console.log("Page has loaded: ", `width, height: ${window.innerWidth}, ${window.innerHeight}`);
-    if (window.innerWidth <= 767) {
+    if (window.innerWidth <= 810) {
         document.getElementById('settings-container').classList.replace('settings-container-anim', 'settings-container-mobile-anim');
     }
 });
@@ -103,8 +103,29 @@ function A_Star(){
     }
 
     // GRABS IDs OF THE START AND END NODES;
-    let startNode = document.getElementsByClassName('start-node')[0].id;
-    let endNode = document.getElementsByClassName('end-node')[0].id;
+    let startNode;
+    let endNode
+
+    try{
+        // if (document.getElementsByClassName('start-node')[0].id === undefined) throw "Please select a start node";
+
+        startNode = document.getElementsByClassName('start-node')[0].id;
+
+
+    } catch(error) {
+        alert("Please select a start node");
+        return 0;
+    }
+
+    try{
+        endNode = document.getElementsByClassName('end-node')[0].id;
+
+        if (document.getElementsByClassName('start-node')[0].id === undefined) throw "Please select an end node";
+
+    } catch(error) {
+        alert("Please select an end node");
+        return 0;
+    }
 
     let startCoordinates = getCoordinates(startNode);
     let endCoordinates = getCoordinates(endNode);

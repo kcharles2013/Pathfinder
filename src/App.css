@@ -35,22 +35,36 @@ body {
 /*}*/
 
 
-/*@media screen and (max-width: 872px) {*/
-/*    body {*/
-/*        font-size: 7px;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 872px) {
+    body {
+        /*font-size: 8px;*/
+    }
+}
 
 @media screen and (max-width: 767px){
+    body {
+        font-size: 8px;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 485px){
     body {
         font-size: 7px;
         overflow: auto;
     }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 430px){
     body {
         font-size: 6px;
         overflow: auto;
     }
 }
+
+/*@media screen and (max-width: 390px){*/
+/*    body {*/
+/*        font-size: 6px;*/
+/*        overflow: auto;*/
+/*    }*/
+/*}*/

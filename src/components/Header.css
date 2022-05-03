@@ -1,3 +1,23 @@
+@media screen and (max-width: 530px){
+    #block-container-one{
+        width: 10vw;
+        /*background-color: green;*/
+    }
+    #block-container-two{
+        width: 80vw;
+        /*background-color: red;*/
+    }
+    #block-container-three{
+        width: 10vw;
+        /*background-color: yellow;*/
+    }
+
+    #clear-path{
+        margin-left: 0.5em;
+        margin-right: -1em;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .header-container{
         /*font-size: 2em;*/
@@ -21,27 +41,13 @@
     #settings{
         display: none;
     }
-    #settings:hover{
-        /*cursor: pointer;*/
-    }
+
     #settings-icon{
         font-size: 2.5em;
         display: flex;
     }
     #settings-icon:hover{
         cursor: pointer;
-    }
-    #a-star{
-        /*font-size: 3em;*/
-        /*white-space: nowrap;*/
-        /*margin-right: 1.5em;*/
-        /*margin-left: 0;*/
-    }
-    #clear-path{
-        /*font-size: 3em;*/
-        /*white-space: nowrap;*/
-        /*margin-right: -2.5em;*/
-        /*margin-left: 0;*/
     }
 }
 
