@@ -1,29 +1,12 @@
-* {
-    /*--ButtonColor: #A0D2DB;*/
-    /*--HoverButtonColor: #C4E3E9;*/
-    /*--HeaderFooterColor: #000000;*/
-    /*--GridContainerColor: #473C8A;*/
-    /*--LegendColor: #726E60;*/
-    /*--NodeHoverColor: #3A3271;*/
-}
-
 .light-color-scheme{
     --ButtonColor: #ffffff;
     --HoverButtonColor: #B5F44A;
     --HeaderFooterColor: #007EA7;
     --GridContainerColor: #C0C0C0;
     --LegendColor: #433E3F;
+    --LegendTextColor: #C0C0C0;
     --NodeHoverColor: #B5F44A;
 
-}
-
-.medium-color-scheme{
-    --ButtonColor: #A0D2DB;
-    --HoverButtonColor: #C4E3E9;
-    --HeaderFooterColor: #000000;
-    --GridContainerColor: #473C8A;
-    --LegendColor: #726E60;
-    --NodeHoverColor: #3A3271;
 }
 
 .dark-color-scheme{
@@ -32,6 +15,7 @@
     --HeaderFooterColor: #000000;
     --GridContainerColor: #473C8A;
     --LegendColor: #726E60;
+    --LegendTextColor: #000000;
     --NodeHoverColor: #3A3271;
 }
 

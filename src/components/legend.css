@@ -50,12 +50,14 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
+    color: var(--LegendTextColor);
 }
 
 .legend-list-container{
     display: flex;
     flex-direction: column;
     margin-top: 2em;
+    color: var(--LegendTextColor);
 }
 
 .legend-list-row-gap{
