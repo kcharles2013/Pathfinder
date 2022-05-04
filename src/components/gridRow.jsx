@@ -29,6 +29,7 @@ function GridRow(props){
                              console.log(document.getElementById(key));
 
                              // IF SELECTSTARTNODE IS DESCRIBED AS TRUE, THEN NEXT CLICK WILL ADD START-NODE CLASS;
+                             // SAME APPLIES FOR ALL THE OTHER NODE TYPES;
                              selectStartNodeHandler(index, props.columnNum, classes);
 
                              selectEndNodeHandler(index, props.columnNum, classes);
@@ -36,9 +37,7 @@ function GridRow(props){
                              selectWallNodeHandler(index, props.columnNum, classes);
 
                              clearNodeHandler(index, props.columnNum, classes);
-
-
-                             console.log("Node Classes: " + classes);
+                             // console.log("Node Classes: " + classes);
 
                          }}
                      />
@@ -65,8 +64,6 @@ function selectStartNodeHandler(_x, _y, _classes){
         // SETS THE SELECTSTARTNODE CLASS BACK TO FALSE;
         document.getElementById(`SelectStartNode: true`).id = `SelectStartNode: false`;
 
-        // let classes = document.getElementById(`Node: ${_x}, ${_y}`).classList;
-
         // REMOVES UNVISITED NODE CLASS IF IT IS PRESENT;
         removeUnvisitedAddNode(`Node: ${_x}, ${_y}`, _classes);
 
@@ -76,21 +73,13 @@ function selectStartNodeHandler(_x, _y, _classes){
             document.getElementById(`SelectStartNode: false`).id = `SelectStartNode: true`;
 
         }
-
-
-        // checkEndStartNodesHandler();
-        // startNodeCheckHandler(_x, _y, 'start-node');
-
     }
-
 }
 
 function selectEndNodeHandler(_x, _y, _classes){
     if (document.getElementById(`SelectEndNode: true`) != null){
         // SETS THE SELECTENDNODE CLASS BACK TO FALSE;
         document.getElementById(`SelectEndNode: true`).id = `SelectEndNode: false`;
-
-        // let classes = document.getElementById(`Node: ${_x}, ${_y}`).classList;
 
         // REMOVES UNVISITED NODE CLASS IF IT IS PRESENT;
         removeUnvisitedAddNode(`Node: ${_x}, ${_y}`, _classes);
@@ -101,29 +90,20 @@ function selectEndNodeHandler(_x, _y, _classes){
         } else {
             document.getElementById(`SelectEndNode: false`).id = `SelectEndNode: true`;
         }
-
-        // checkEndStartNodesHandler();
-        // endNodeCheckHandler(_x, _y, 'end-node');
-
     }
-
 }
 
 function selectWallNodeHandler(_x, _y, _classes){
+    // ASSIGNS THE WALL CLASS TO A NODE, IF IT DOES NOT ALREADY HAVE A SECONDARY CLASS;
     if (document.getElementById('SelectWallNode: true') != null){
-        // document.getElementById('SelectWallNode: true').id = 'SelectWallNode: false';
-
-        // let classes = document.getElementById(`Node: ${_x}, ${_y}`).classList;
-
         if (_classes.length <= 1){
             document.getElementById(`Node: ${_x}, ${_y}`).classList.add("wall-node");
         }
-
-        // wallNodeCheckHandler(_x, _y, 'wall-node');
     }
 }
 
 function clearNodeHandler(_x, _y, _classes){
+    // CLEARS A SINGLE NODE OF ANY EXTRA CLASSES;
     if (document.getElementById('clearNode: true') != null){
         if (_classes.length > 1){
             for (let i = 0; i < _classes.length; i++){
@@ -132,11 +112,11 @@ function clearNodeHandler(_x, _y, _classes){
                 }
             }
         }
-        // document.getElementById('clearNode: true').id = 'clearNode: false';
     }
 }
 
 function removeUnvisitedAddNode(_thisID, _classes){
+    // REMOVES UNVISITED NODE CLASS;
     for (let i = 0; i < _classes.length; i++){
         if (document.getElementById(_thisID).classList[i] === 'unvisited-node'){
             document.getElementById(_thisID).classList.add('node');
@@ -144,5 +124,3 @@ function removeUnvisitedAddNode(_thisID, _classes){
         }
     }
 }
-
-// NEED TO ADD IN A FUNCTION TO PASS ERROR NOTIFICATIONS TO USER; MIGHT DO THIS IN A SEPARATE FILE THOUGH;

@@ -205,6 +205,10 @@
     font-size: 2em;
 }
 
+.path-speed-slider:hover{
+    cursor: pointer;
+}
+
 .slider-disabled{
     pointer-events: none;
     opacity: 0.5;

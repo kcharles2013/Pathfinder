@@ -1,36 +1,20 @@
 @media screen and (max-width: 930px){
-    /*#grid-container{*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    align-items: center;*/
-    /*    justify-content: center;*/
-    /*}*/
-
     #right-legend{
-        /*align-items: stretch;*/
-        /*display: none;*/
         height: 100vh;
         width: 35%;
-        /*background-color: red;*/
-        /*flex-grow: 0.5;*/
     }
 
     #left-legend{
-        /*align-items: stretch;*/
         height: 100vh;
         width: 65%;
-        /*background-color: green;*/
-        /*flex-grow: 0;*/
     }
 
     #center-grid{
-        /*align-items: stretch;*/
         height: 60vh;
         width: 100%;
-        /*background-color: orange;*/
-        /*flex-grow: 2;*/
     }
 }
+
 @media screen and (max-width: 767px) {
     #grid-container{
         display: flex;
@@ -40,33 +24,19 @@
         font-size: 0.9em;
     }
 
-    #grid{
-        /*margin-bottom: 4vh;*/
-    }
-
     #right-legend{
-        /*align-items: stretch;*/
-        /*display: none;*/
         height: 35vh;
         width: 100%;
-        /*background-color: red;*/
-        /*flex-grow: 0.5;*/
     }
 
     #left-legend{
-        /*align-items: stretch;*/
         height: 5vh;
         width: 100vw;
-        /*background-color: green;*/
-        /*flex-grow: 0;*/
     }
 
     #center-grid{
-        /*align-items: stretch;*/
         height: 60vh;
         width: 100%;
-        /*background-color: orange;*/
-        /*flex-grow: 2;*/
     }
 
 
@@ -78,7 +48,6 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
-    /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
 }
@@ -93,19 +62,17 @@
 .right-legend{
     height: 100%;
     width: 25%;
-    /*background-color: red;*/
 }
 
 .left-legend{
     height: 100%;
     width: 25%;
-    /*background-color: green;*/
 }
 
 .center-grid{
     height: 100%;
     width: 50%;
-    /*background-color: orange;*/
+    z-index: 0;
 }
 
 .grid{
@@ -114,10 +81,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: transparent;
-    /*height: 50vh;*/
-    /*width: 50vw;*/
     box-shadow: 0 1px 20px 1px #000;
-    /*margin-bottom: 3vh;*/
 }
 
 .grid-row{
@@ -130,12 +94,8 @@
     border: 1px solid black;
     height: 2em;
     width: 2em;
-
-
 }
 
 .grid-cube:hover{
     background-color: purple;
-    /*opacity: 0.5;*/
-    /*transition: 0.1s ease-out;*/
 }

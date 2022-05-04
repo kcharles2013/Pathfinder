@@ -14,30 +14,6 @@ for (let i = 101; i > 1; i--){
     speedArray.push(value);
 }
 
-// SETS THE INITIAL ANIMATION CLASS FOR SETTINGS PAGE: ON LOAD;
-window.addEventListener('load', function (){
-    // console.log("Page has loaded: ", `width, height: ${window.innerWidth}, ${window.innerHeight}`);
-    if (window.innerWidth <= 810) {
-        document.getElementById('settings-container').classList.replace('settings-container-anim', 'settings-container-mobile-anim');
-    }
-});
-
-// UPDATES THE SETTINGS ANIMATION BASED ON RESIZING OF THE SCREEN'S WIDTH;
-window.addEventListener('resize', function(){
-    // console.log(`Window width: ${window.innerWidth}`);
-    let isMobile = true;
-    for (let i = 0; i < document.getElementById('settings-container').classList.length; i++){
-        if (document.getElementById('settings-container').classList[i] === 'settings-container-anim'){
-            isMobile = false;
-        }
-    }
-    if (window.innerWidth <= 767 && isMobile === false){
-        document.getElementById('settings-container').classList.replace('settings-container-anim', 'settings-container-mobile-anim');
-    } else if (window.innerWidth > 767){
-        document.getElementById('settings-container').classList.replace('settings-container-mobile-anim', 'settings-container-anim');
-    }
-});
-
 function Header(){
     return (
         <div className="header-container" id="header-container">
@@ -120,7 +96,7 @@ function A_Star(){
     try{
         endNode = document.getElementsByClassName('end-node')[0].id;
 
-        if (document.getElementsByClassName('start-node')[0].id === undefined) throw "Please select an end node";
+        // if (document.getElementsByClassName('start-node')[0].id === undefined) throw "Please select an end node";
 
     } catch(error) {
         alert("Please select an End Block");
@@ -412,18 +388,6 @@ function A_Star(){
     delayPathAnim(1, pathStack);
 }
 
-// function changeSettingsAnim(mediaQueryParameter){
-//     if (mediaQueryParameter.matches){
-//         console.log(`Matches`);
-//         console.log(`inputVar: ${mediaQueryParameter}`);
-//         return true;
-//     } else {
-//         console.log(`Does not match`);
-//         console.log(`inputVar: ${mediaQueryParameter}`);
-//         return false;
-//     }
-// }
-
 function settingsHandler(){
     // let param = window.matchMedia('(max-width: 767px)');
     // let isMobile = changeSettingsAnim(param);
@@ -450,7 +414,6 @@ function delayPathAnim(index, pathArray){
 function anim(_index, _pathArray){
     // BY ESTABLISHING THE SPEED FOR EACH ANIMATION, THE USER CAN TOGGLE THE SPEED AS IT ANIMATES;
     // ALLOWS FOR SLOWING AND SPEEDING OF THE ANIMATION IN REAL TIME;
-    // **ADDS A ON EXTRA VARIABLE PER RECURSION LOOP** RESOURCES INTENSIVE;
     let pathSpeed = document.getElementById('speed-slider').value - 1;
     setTimeout(function (){
         // console.log("index: " + _index);
@@ -509,6 +472,7 @@ function getCoordinates(_ID){
 }
 
 function clearPathHandler(){
+    // CLEARS OUT THE CURRENT PATHWAY FROM START NODE TO END NODE;
     for (let x = 0; x <= userVars.xLength - 1; x++){
         for (let y = 0; y <= userVars.yLength - 1; y++){
             let thisID = `Node: ${x}, ${y}`

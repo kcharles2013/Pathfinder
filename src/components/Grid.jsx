@@ -1,25 +1,15 @@
 import React, {useState} from "react";
-import createGridArray from "./GridArray";
-// import Node from "./Node";
 import GridRow from "./gridRow";
-import ErrorMessage from "./ErrorMessage";
 import LegendMobile from "./legend-mobile";
 import userVars from "./userVars";
 import Legend from "./legend";
 
 function Grid(){
-    let tempGrid = createGrid();
-    const [grid, setGrid] = useState(tempGrid);
-
-    // const clearGrid = () => {
-    //     tempGrid = createGrid();
-    //     setGrid(tempGrid);
-    // }
+    let currentGrid = createGrid();
+    const [grid, setGrid] = useState(currentGrid);
 
     let selectStartNode = false;
     let selectEndNode = false;
-
-    let testText = "TestText";
 
     return(
         <div className="grid-container" id='grid-container'>
@@ -46,20 +36,19 @@ function Grid(){
             <div className='grid-item right-legend' id='right-legend'>
                 <LegendMobile />
             </div>
-            <ErrorMessage
-                errorMessage={testText}
-            />
         </div>
     )
 }
 
 function createGrid(){
+    // CREATES AN ARRAY THAT DICTATES HOW MANY ROWS WILL BE MADE IN THE GRID;
+    // GRID.MAP HANDLES HOW MANY COLUMNS WILL BE CREATED AFTER THE ROWS HAVE BEEN
+    // ESTABLISHED;
     let _grid = [];
 
     for (let i = 0; i < userVars.yLength; i++){
         _grid.push(i);
     }
-
     return _grid;
 }
 
